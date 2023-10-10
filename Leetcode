@@ -1,1 +1,15 @@
+Problem number - 268
 
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        int actual = (n *(n+1))/2;
+        int total_sum = 0;
+
+        for(int i=0;i<n;i++){
+            total_sum +=nums[i];
+        }
+        int result = actual - total_sum;
+        return result;
+    }
+}
